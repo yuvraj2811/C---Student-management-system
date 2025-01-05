@@ -180,15 +180,15 @@ void updateById() {
     // Read each line from the original file
     while (fgets(line, sizeof(line), fp)) {
         int studentId;
-        sscanf(line, "%d", &studentId);  // Extract the student ID from the line
+        sscanf(line, "%d", &studentId);  
 
         if (studentId == id) {
             found = 1;
 
-            // Prompt the user for new details to update the record
+            
             printf("Enter new name: ");
             char name[30];
-            fgets(name, sizeof(name), stdin);  // Read the new name (with spaces)
+            fgets(name, sizeof(name), stdin);  
             name[strcspn(name, "\n")] = 0;  // Remove trailing newline
 
             printf("Enter new age: ");
@@ -198,15 +198,15 @@ void updateById() {
 
             printf("Enter new course: ");
             char course[50];
-            fgets(course, sizeof(course), stdin);  // Read the course (with spaces)
-            course[strcspn(course, "\n")] = 0;  // Remove trailing newline
+            fgets(course, sizeof(course), stdin);  
+            course[strcspn(course, "\n")] = 0;  
 
             printf("Enter new enrollment status: ");
             char enrolledStatus[20];
-            fgets(enrolledStatus, sizeof(enrolledStatus), stdin);  // Read the enrollment status (with spaces)
-            enrolledStatus[strcspn(enrolledStatus, "\n")] = 0;  // Remove trailing newline
+            fgets(enrolledStatus, sizeof(enrolledStatus), stdin);  
+            enrolledStatus[strcspn(enrolledStatus, "\n")] = 0;  
 
-            // Write the updated student record to the temporary file
+            
             fprintf(temp, "%-10d%-30s%-10d%-30s%-20s\n", id, name, age, course, enrolledStatus);
         } else {
             // If the record doesn't match the id, write the original line to the temp file
@@ -218,7 +218,7 @@ void updateById() {
     fclose(temp);
 
     if (found) {
-        // Replace the original file with the updated one
+        
         remove("Student.txt");
         rename("temp.txt", "Student.txt");
         printf("Record updated successfully!\n");
@@ -232,15 +232,15 @@ void deleteById() {
     printf("Enter student id to delete:\n");
     int id;
     scanf("%d", &id);
-    getchar();  // Clear the newline character left by scanf
+    getchar();  
 
-    fp = fopen("Student.txt", "r");  // Open the original file for reading
+    fp = fopen("Student.txt", "r");  
     if (fp == NULL) {
         printf("Error opening the file for reading.\n");
         return;
     }
 
-    FILE *temp = fopen("temp.txt", "w");  // Open a temporary file for writing
+    FILE *temp = fopen("temp.txt", "w");  
     if (temp == NULL) {
         printf("Error opening the temporary file for writing.\n");
         fclose(fp);
@@ -250,13 +250,13 @@ void deleteById() {
     char line[100];
     int found = 0;
 
-    // Read each line from the original file
+    
     while (fgets(line, sizeof(line), fp)) {
         int studentId;
-        sscanf(line, "%d", &studentId);  // Extract the student ID from the line
+        sscanf(line, "%d", &studentId);  
 
         if (studentId == id) {
-            // If the ID matches, don't write this record to the temp file (delete it)
+            
             found = 1;
             printf("Record with ID %d deleted successfully.\n", id);
         } else {
@@ -282,9 +282,9 @@ void enrolledStatusById() {
     printf("Enter student id to check enrollment status:\n");
     int id;
     scanf("%d", &id);
-    getchar();  // Clear the newline character left by scanf
+    getchar();  
 
-     fp = fopen("Student.txt", "r");  // Open the original file for reading
+     fp = fopen("Student.txt", "r");  
     if (fp == NULL) {
         printf("Error opening the file for reading.\n");
         return;
@@ -293,19 +293,19 @@ void enrolledStatusById() {
     char line[100];
     int found = 0;
 
-    // Read each line from the original file
+    
     while (fgets(line, sizeof(line), fp)) {
         int studentId;
-        sscanf(line, "%d", &studentId);  // Extract the student ID from the line
+        sscanf(line, "%d", &studentId);  
 
         if (studentId == id) {
             found = 1;
 
-            // Extract student details from the line
+            
             char name[30], course[50], enrolledStatus[20];
             int age;
 
-            // Extract each field from the current line
+            
             sscanf(line, "%d %[^\n] %[^\n] %d %[^\n]", &studentId, name, course, &age, enrolledStatus);
 
             // Display the enrollment status

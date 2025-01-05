@@ -1,5 +1,41 @@
 Id         Name                         Age            Course                  Enrolled
-1         gaurav                        25        full stack development        true                
-2         aanaya shivam                 23        fullstack development         true                
-3         sandeep anand                 25        full stack development        true                
-4         rajeev kumar                  23        android development           true                
+1         Gaurav Kumar                  25        Full Stack Development          true
+2         Aanaya Shivam                 23        Fullstack Development           true
+3         Sandeep Anand                 25        Full Stack Development          true
+4         Priya Sharma                  27        Data Science                    false
+5         Rakesh Singh                  28        Mobile App Development          true
+6         Neha Joshi                    22        Cyber Security                  true
+7         Amit Verma                    30        Cloud Computing                 false
+8         Rohan Mehta                   24        Machine Learning                true
+9         Simran Kaur                   26        Web Development                 true
+10        Vivek Agarwal                 32        Software Engineering            true
+11        Shweta Rai                    23        Database Administration         false
+12        Aditya Yadav                  29        AI Development                  true
+13        Meena Gupta                   25        DevOps                         false
+14        Deepak Singh                  31        Game Development                true
+15        Manish Kumar                  27        Backend Development             true
+16        Neeraj Patil                  24        System Programming              true
+17        Sakshi Mehta                  26        UI/UX Design                    false
+18        Tarun Gupta                   28        Network Engineering             true
+19        Kritika Dubey                 22        Frontend Development            true
+20        Ankit Soni                    29        Software Testing                false
+21        Aarav Sharma                  26        Full Stack Development          true
+22        Kiran Mehta                   30        Data Science                    false
+23        Rohit Kumar                   27        Mobile App Development          true
+24        Priya Patel                   23        Cyber Security                  true
+25        Anjali Gupta                  28        Cloud Computing                 true
+26        Rajesh Yadav                  25        Machine Learning                false
+27        Simran Kaur                   29        Web Development                 true
+28        Vishal Verma                  24        Software Engineering            true
+29        Shreya Rai                    22        Database Administration         true
+30        Arvind Singh                  31        AI Development                  false
+31        Neha Sharma                   27        DevOps                          true
+32        Suraj Kumar                   23        Game Development                false
+33        Alok Mehta                    30        Backend Development             true
+34        Deepika Patel                 26        System Programming              true
+35        Nikhil Soni                   28        UI/UX Design                    false
+36        Tarun Gupta                   25        Network Engineering             true
+37        Harshita Verma                22        Frontend Development            true
+38        Raj Kumar                     29        Software Testing                false
+39        Pooja Jain                    24        Data Science                    true
+40        Aman Gupta                    31        Full Stack Development          true
